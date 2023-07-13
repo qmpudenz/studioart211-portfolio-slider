@@ -1,0 +1,48 @@
+body {
+  height: 300vh;
+  width: 100vw;
+  background-color: white;
+  margin: 0rem;
+  overflow: hidden;
+}
+
+#image-track {
+  display: flex;
+  gap: 2vmin;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(0%, -50%);
+  user-select: none; /* -- Prevent image highlighting -- */
+}
+
+#image-track > .image-wrapper > .image {
+  width: 90vmin;
+  height: 80vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-title {
+  position: absolute;
+  top: -75px;
+  left: 0;
+  color: black;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  font-family: sans-serif;
+  font-weight: 200;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  cursor: pointer; /* Change the cursor to a hand when hovering over the title */
+}
+
+.image-title:hover {
+  color: #000000; /* Change color to red on hover */
+  transform: scale(1.15); /* Increase size by 10% on hover */
+}
